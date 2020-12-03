@@ -5,7 +5,7 @@
             0, если значение равно нулю.
             Предполагается, что пользователь вводит только числа. */
 
-var a = prompt("Please, enter a namber", 0);
+var a = prompt("Please, enter a number", 0);
 
 if (a > 0) {
     console.log(a);

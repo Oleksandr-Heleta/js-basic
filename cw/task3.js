@@ -6,8 +6,8 @@
 var age = +prompt("Please, enter your age", 0);
 if (age >= 14 && age <= 90) {
     console.log(age + " is true");
-    alert("You can see this film");
+    alert("You can watch this film");
 } else {
     console.log(age + " is false");
-    alert("You cann\'t see this film");
+    alert("You can\'t watch this film");
 }
