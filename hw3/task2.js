@@ -1,21 +1,18 @@
 //  2. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
 
-// Не для ІТ-шников
-var somArr = new Array();
-var index = +prompt('Введите значение елемента, после которого хотите вставить свой елемент', 0);
-var item = prompt('Введите свой елемент', 0);
-if (index > 0) {
-    somArr[index] = item;
-    console.log(somArr);
-} else {
-    somArr.push(item);
-    console.log(somArr);
-}
-    
-// Для ІТ-шников
-/* var somArr = new Array();
-var index = +prompt('Введите значение елемента, после которого хотите вставить свой елемент', -1);
-var item = prompt('Введите свой елемент', 0);
 
-somArr[index + 1] = item;
-console.log(somArr); */
+var cars = ["Opel", "Peugeot", "Audi", "Ford"];
+var carInArr = prompt('Введите название авто, после которого хотите вставить свой автомобиль. Уже есть ' + cars);
+var newCar = prompt('Введите свой автомобиль');
+
+
+console.log(cars);
+console.log("car in Arr - " + carInArr);
+
+var index = cars.indexOf(carInArr) + 1;  // При отмене  или неверном значении будет вводить первым
+console.log("index - " + index);   
+cars.splice(index, 0, newCar);
+console.log("arr - " + cars);
+
+
+alert("Новая Перечень авто: " + cars);
