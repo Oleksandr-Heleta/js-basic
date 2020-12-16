@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin generator</title>
+    <style>
+        .wraper {
+            max-width: 900px;
+            margin: 0px auto;
+        }
+        .main { 
+            padding-bottom: 50px;
+        }
+        .main p {
+            max-width: 600px;
+            margin: 0px auto;
+            display: inline-block;
+            display: flex;
+            justify-content: space-between;
+        }
+        .out {
+            display: flex;
+            background-color: blue;
+            max-width: 250px;
+            margin: 0 auto;
+           
+        }
+        .in {
+            align-self: center;
+            background-color: yellow;
+            max-width: 250px;
+            max-height: 250px;
+            min-height: 50px;
+            min-width: 50px;
+            flex: 1 1 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wraper">
+        <h1>Margin generator</h1>
+        <div class="main">
+            <p>
+                <span>top margin</span>
+                <input type="range" id="top" value="0" min="0" max="100" oninput="onRangeChange()">
+                <span id="tm">0</span>
+            </p>
+            <p>
+                <span>right margin</span>
+                <input type="range" id="right" value="0" min="0" max="100" oninput="onRangeChange()">
+                <span id="rm">0</span>
+            </p>
+            <p>
+                <span>bottom margin</span>
+                <input type="range" id="bottom" value="0" min="0" max="100" oninput="onRangeChange()">
+                <span id="bm">0</span>
+            </p>
+            <p>
+                <span>left margin</span>
+                <input type="range" id="left" value="0" min="0" max="100" oninput="onRangeChange()">
+                <span id="lm">0</span>
+            </p>
+
+        </div>
+        <div class="out">
+            <div id="block" class="in"></div>
+        </div>
+    </div>
+    <script>
+        
+    //    6. Реализовать свой CSS generator как был выполнен на уроке, только для margin
+        function onRangeChange() {
+                
+                var top = document.getElementById('top').value; 
+                var right = document.getElementById('right').value;
+                var bottom = document.getElementById('bottom').value;
+                var left = document.getElementById('left').value;
+
+                
+                var tm = document.getElementById('tm'); 
+                var rm = document.getElementById('rm');
+                var bm = document.getElementById('bm');
+                var lm = document.getElementById('lm');
+
+                
+                tm.innerHTML = top;
+                rm.innerHTML = right;
+                bm.innerHTML = bottom;
+                lm.innerHTML = left;
+
+                
+                var block = document.getElementById('block');
+
+                
+
+                block.style.margin = top + "px " + right + "px " + bottom + "px " + left + "px ";
+            }
+
+
+    </script>
+</body>
+</html>
