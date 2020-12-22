@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff list</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Staff</h1>
+        <div class="new-emplotee">
+            <div class="name">
+                <span>First name :</span>
+                <input type="text" id="name">
+            </div>
+            <div class="sName">
+                <span>Second name :</span>
+                <input type="text" id="sName">
+            </div>
+            <div class="age">
+                <span>Age :</span>
+                <input type="text" id="age">
+            </div>
+            <div class="occupation">
+                <span>Occupation :</span>
+                <input type="text" id="occupation">
+            </div>
+            <button id="addBtn">Add employee</button>
+        </div>
+        <div class="list">
+            <h2>Employee's list</h2>
+            <ol id="list">
+                <li>name sName age occupation</li>
+            </ol>
+        </div>
+        <div class="function">
+            <button id="salary">Add salary</button>
+            <span>Sort property</span>
+            <input type="text" id="property">
+            <button id="sort">Sort</button>
+        </div>
+    </div>
+    <script>
+        // Получаем доступ к елементам
+       
+        var list = document.getElementById("list");
+        var addBtn = document.getElementById("addBtn");
+        var staff = [];
+
+       
+
+        addBtn.addEventListener('click', function (){
+            
+            var fName = document.getElementById("name").value;
+            var sName = document.getElementById("sName").value;
+            var age = document.getElementById("age").value;
+            var occupation = document.getElementById("occupation").value;
+            
+            staff.push({
+                name: fName,
+                sName: sName,
+                age: age,
+                occupation: occupation
+            });
+            
+            var listItem = document.createElement('li');
+            listItem.innerHTML = "<span> " + staff[staff.length-1].name + " </span><span> " + staff[staff.length - 1].sName + "</span><span>" +  staff[staff.length - 1].age + " years old </span><span>" + staff[staff.length - 1].occupation + "</span>";
+            list.appendChild(listItem);
+
+            console.log(staff[staff.length - 1]);
+               
+        });
+
+
+    </script>
+</body>
+</html>
