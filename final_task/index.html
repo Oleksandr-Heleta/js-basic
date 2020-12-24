@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/show.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
     <title>Trafalgar</title>
 </head>
 
@@ -50,7 +50,7 @@
                 treatment with our highly qualified doctors you can consult with us which type of service is suitable
                 for your health
             </p>
-            <div class="service__list">
+            <div id ="service_id" class="service__list">
                 <div class="service__item">
                     <img class="service__item-img" src="img/service/1.svg" alt="">
                     <div>
@@ -210,9 +210,15 @@
             </div>
 
             <div class="feedback__nav">
-                <button type="button" class="slick-prev" id="prev" onclick="navigateSlides(-1)"></button>
-                <div class="feedback__dots"></div>
-                <button type="button" class="slick-next" id="next" onclick="navigateSlides(1)"></button>
+                <button type="button" class="slick-prev slick-arrow" id="prev" onclick="navigateSlides(-1)"></button>
+                <div class="feedback__dots">
+                    <ul class="slick-dots" >
+                        <li><button onclick="showCurrentSlide(1)"></button></li>
+                        <li><button onclick="showCurrentSlide(2)"></button></li>
+                        <li><button onclick="showCurrentSlide(3)"></button></li>
+                    </ul>
+                </div>
+                <button type="button" class="slick-next slick-arrow" id="next" onclick="navigateSlides(1)"></button>
             </div>
         </div>
     </section>
@@ -340,10 +346,18 @@
     <!-- button for scrollToTop -->
     <button id="goTopBtn" class="btn__go-top"></button>
 
+    <!-- show service -->
+    <div id="wrapp" class="show-wrapper">
+        <div id="item" class="show">
+            <span id="show_close" class="consult__close-btn"></span>
+        </div>
+    </div>
+
     <!-- script js -->
     <script src="./js/totop.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/service.js"></script>
 </body>
 
 </html>
