@@ -13,13 +13,14 @@ items.onclick = function(event) {
   };
     
     item.appendChild(target);
+    // document.item.createElement(target);
     wrap.style.display = 'block'; 
   };
   
 closeBtn.addEventListener('click', function() {
   var delItem = item.lastChild;
   items.appendChild(delItem);
-  
+  // item.removeChild(delItem);
   wrap.style.display = 'none';
   
 }); 

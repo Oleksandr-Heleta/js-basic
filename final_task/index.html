@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/show.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
     <title>Trafalgar</title>
@@ -173,6 +175,7 @@
                     What our customer are saying
                 </h4>
                 <div class="feedback__slider">
+                    <div>
                     <div class="feedback__item">
                         <img class="feedback__item-img" src="img/feedback/1.jpg" alt="">
                         <div>
@@ -184,6 +187,8 @@
                             instantaneously (no tedeous form, long calls, or administrative hassle) and securely”
                         </p>
                     </div>
+                    </div>
+                    <div>
                     <div class="feedback__item">
                         <img class="feedback__item-img" src="img/feedback/3.jpg" alt="">
                         <div>
@@ -195,6 +200,8 @@
                             instantaneously (no tedeous form, long calls, or administrative hassle) and securely”
                         </p>
                     </div>
+                    </div>
+                    <div>
                     <div class="feedback__item">
                         <img class="feedback__item-img" src="img/feedback/4.jpg" alt="">
                         <div>
@@ -206,10 +213,11 @@
                             instantaneously (no tedeous form, long calls, or administrative hassle) and securely”
                         </p>
                     </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="feedback__nav">
+            <!-- <div class="feedback__nav">
                 <button type="button" class="slick-prev slick-arrow" id="prev" onclick="navigateSlides(-1)"></button>
                 <div class="feedback__dots">
                     <ul class="slick-dots" >
@@ -219,6 +227,12 @@
                     </ul>
                 </div>
                 <button type="button" class="slick-next slick-arrow" id="next" onclick="navigateSlides(1)"></button>
+            </div> -->
+
+            <div class="feedback__nav">
+                <!-- <button type="button" class="slick-prev" id="prev"></button> -->
+                <div class="feedback__dots"></div>
+                <!-- <button type="button" class="slick-next" id="next"></button> -->
             </div>
         </div>
     </section>
@@ -356,8 +370,12 @@
     <!-- script js -->
     <script src="./js/totop.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/slider.js"></script>
+    <!-- <script src="./js/slider.js"></script> -->
     <script src="./js/service.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script src='./slick//slick.min.js'></script>
+    <script src="./js/slickSlider.js"></script>
 </body>
 
 </html>

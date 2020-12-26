@@ -510,6 +510,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+  font-size: 0;
 }
 
 .feedback__nav .slick-prev,
@@ -565,8 +566,9 @@ body {
 .feedback__item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   cursor: pointer;
+  min-width: 0;
 }
 
 .feedback__item-img {
@@ -574,22 +576,26 @@ body {
   border-radius: 50%;
   border: 5px solid #fff;
   margin-right: 30px;
+  min-width: 0;
 }
 
 .feedback__item > div {
   margin-right: 110px;
   color: #ffffff;
+  min-width: 0;
 }
 
 .feedback__item-name {
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 20px;
+  min-width: 0;
 }
 
 .feedback__item-position {
   font-weight: normal;
   font-size: 18px;
+  min-width: 0;
 }
 
 .feedback__item-text {
@@ -597,6 +603,7 @@ body {
   font-size: 19px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.9);
+  min-width: 0;
 }
 
 .feedback__left-btn {
